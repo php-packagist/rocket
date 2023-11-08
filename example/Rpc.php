@@ -10,7 +10,7 @@ class Rpc
     public function __construct()
     {
         $this->client = new Client(Config::create(array(
-            'endpoint' => 'http://localhost:8000',
+            'endpoint' => 'http://192.168.2.8:8000',
             'timeout' => 2,
         )));
     }
