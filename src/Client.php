@@ -38,8 +38,10 @@ class Client
      */
     public function invoke($method, $path, $params = array(), $headers = array(), $options = array())
     {
-        $request = $this->transporter->createRequest($method, $path,
+        $request = $this->transporter->createRequest(
+            $method, $path,
             array_merge_recursive($this->config->headers, $headers),
+            $params,
             array_merge_recursive($this->config->options, $options)
         );
 
